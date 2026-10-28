@@ -206,18 +206,51 @@
       .hero .btn-primary {
         margin-top: 30px;
       }
+      /* Capa do ebook: proporção original 2:3, sem distorção */
       .mockup-frame {
-        max-width: 260px;
-        margin: 28px auto 0;
-        aspect-ratio: 3/4;
-        border: 1px dashed rgba(255, 255, 255, 0.3);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 0.78rem;
-        opacity: 0.6;
-        padding: 12px;
-        text-align: center;
+        width: min(100%, 300px);
+        aspect-ratio: 2 / 3;
+        margin: 32px auto 0;
+        padding: 0;
+        border: 0;
+        border-radius: 10px;
+        overflow: hidden;
+        display: block;
+        opacity: 1;
+        background: var(--paper2);
+        box-shadow:
+          0 18px 40px rgba(0, 0, 0, 0.24),
+          0 4px 12px rgba(0, 0, 0, 0.12);
+      }
+
+      .mockup-frame img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+      }
+
+      @media (min-width: 680px) {
+        .hero .mockup-frame {
+          width: min(100%, 320px);
+          margin-top: 36px;
+        }
+
+        #solucao .mockup-frame {
+          width: min(100%, 300px);
+        }
+      }
+
+      @media (max-width: 420px) {
+        .hero {
+          padding: 42px 18px 36px;
+        }
+
+        .mockup-frame {
+          width: min(100%, 250px);
+          margin-top: 26px;
+        }
       }
 
       /* bloco 2/3/4 identificação, dor, desejo */
@@ -502,8 +535,13 @@
           🔒 Pagamento seguro · Acesso imediato · Garantia incondicional de 7
           dias
         </p>
-        <!-- Mockup 3D do ebook — ver prompt de imagem sugerido na conversa -->
-        <div class="mockup-frame">Mockup 3D do ebook "Destrava as Dívidas"</div>
+        <div class="mockup-frame">
+          <img
+            src="img/capa2.png"
+            alt="Capa do ebook Destrava as Dívidas"
+            loading="lazy"
+          />
+        </div>
       </div>
     </section>
 
@@ -678,18 +716,12 @@
           vez de teoria financeira, você recebe ação diária, modelos prontos e
           roteiros de negociação para usar com o seu credor.
         </p>
-        <!-- Mockup do ebook + calendário de 30 dias — ver prompt de imagem sugerido na conversa -->
-        <div
-          class="mockup-frame"
-          style="
-            margin-left: auto;
-            margin-right: auto;
-            border-color: var(--line);
-            color: var(--ink);
-            opacity: 0.5;
-          "
-        >
-          Mockup do ebook + calendário de 30 dias
+        <div class="mockup-frame">
+          <img
+            src="img/capa2.png"
+            alt="Capa do ebook Destrava as Dívidas"
+            loading="lazy"
+          />
         </div>
       </div>
     </section>
@@ -767,7 +799,7 @@
         </div>
 
         <div style="text-align: center; margin-top: 28px">
-          <a class="btn btn-primary" href="#oferta"
+          <a class="btn btn-primary" href="https://pay.kiwify.com.br/arR8HPD"
             >QUERO DESTRAVAR MINHAS DÍVIDAS</a
           >
         </div>
@@ -883,33 +915,6 @@
     -->
       </div>
     </section>
-
-    <!-- BLOCO 11 — sobre o autor -->
-    <section>
-      <div class="wrap">
-        <h2>Quem está por trás do DESTRAVA AS DÍVIDAS</h2>
-        <!-- Use uma foto real sua aqui — não recomendamos foto gerada por IA para esta seção, já que é sobre credibilidade pessoal. -->
-        <div
-          class="mockup-frame"
-          style="
-            margin: 0 0 18px;
-            border-color: var(--line);
-            color: var(--ink);
-            opacity: 0.5;
-            aspect-ratio: 1/1;
-            max-width: 140px;
-          "
-        >
-          Sua foto
-        </div>
-        <p>
-          [Escreva 3 a 5 linhas: quem é você, por que criou este material, qual
-          sua experiência ou história com o tema, e o que você quer que o leitor
-          sinta ao terminar. Quanto mais honesto e humano, melhor.]
-        </p>
-      </div>
-    </section>
-
     <!-- VÍDEO (opcional) — comentado por padrão: a página funciona normalmente sem ele.
      Para ativar, apague a linha de abertura deste comentário (a linha logo acima
      desta) e a linha "fecha comentário" bem no final deste bloco. Troque também
@@ -958,7 +963,7 @@
           <a
             class="btn btn-primary"
             style="margin-top: 18px; width: 100%; justify-content: center"
-            href="SEU_LINK_DE_PAGAMENTO"
+            href="https://pay.kiwify.com.br/arR8HPD"
             >SIM, QUERO MEU PLANO DE 30 DIAS</a
           >
           <p class="micro">
@@ -1095,7 +1100,7 @@
           Os 30 dias vão passar de qualquer jeito. A diferença é onde você vai
           estar quando eles acabarem.
         </p>
-        <a class="btn btn-primary" href="SEU_LINK_DE_PAGAMENTO"
+        <a class="btn btn-primary" href="https://pay.kiwify.com.br/arR8HPD"
           >QUERO COMEÇAR HOJE O MEU PLANO DE 30 DIAS</a
         >
         <div class="ps">
@@ -1125,7 +1130,7 @@
 
     <div class="sticky-bar">
       <span>Plano de 30 dias — R$ 37,00</span>
-      <a href="#oferta">Quero o plano</a>
+      <a href="https://pay.kiwify.com.br/arR8HPD">Quero o plano</a>
     </div>
   </body>
 </html>
